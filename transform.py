@@ -26,7 +26,7 @@ output_file = output_file_date + '_' + filename
 with open(filename, 'rb') as input_file, open(output_file, 'w') as file_output:
     
     #Create the header"""
-    output_file_header = input_file.readline().decode().replace('\r','')
+    output_file_header = input_file.readline().decode('cp1252').replace('\r','')
     file_output.write(output_file_header)
 
     #Skip the header in the input file
