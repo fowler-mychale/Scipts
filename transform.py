@@ -43,8 +43,9 @@ with open(filename, 'rb') as input_file, open(output_file, 'w') as file_output:
 
         #Create variable that display last two characters
         check_email = username[-1:]
+        check_rest_email = username[:-2] 
         
         #Create file based on business rules and write results to file.
-        if check_email.isupper(): #and len(username) < 16:
+        if check_email.isupper() and check_rest_email.islower():
             output_data = ','.join(lines).replace('\r','')
             file_output.write(output_data)
