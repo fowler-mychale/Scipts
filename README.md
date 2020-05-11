@@ -11,3 +11,4 @@ This script is designed to locate emailaddresses that have a distinct pattern.
 - Python
 - Excel
 - Powershell/CMD
+- Vs Code
