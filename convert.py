@@ -2,8 +2,9 @@
 import os
 import pandas as pd
 from datetime import datetime
-
-save_path = "/Users/Mike_F/Desktop/"
+import sys
+newFile = sys.argv[1]
+save_path = pd.read_csv(newFile)
 
 in_filename = os.path.join(save_path,'New Text Document.txt')
 out_filename = os.path.join(save_path, datetime.now().strftime("%Y_%m_%d.csv"))
