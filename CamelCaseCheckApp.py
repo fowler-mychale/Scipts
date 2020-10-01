@@ -9,7 +9,7 @@ def test(newFile):
     df = pd.read_csv(newFile)
 
     #drop NULL vakue from Answer column
-    df.dropna(axis=0, subset=['ANSWER'],inplace = True)
+    df.dropna(axis=0, subset=['Check'],inplace = True)
 
     #function to check CamelCase
     def is_camel_case(s):
@@ -18,7 +18,7 @@ def test(newFile):
       return False
 
     #run is_camel_case function on column 'Row' in dataframe
-    df['Row'] = df['ANSWER'].apply(is_camel_case)
+    df['Row'] = df['Check'].apply(is_camel_case)
 
     #drop row if Boolean False
     df.drop(df.loc[df['Row'] == False].index, inplace=True)
